@@ -12,12 +12,6 @@ const services = [
     icon: "💼"
   },
   {
-    title: "Catálogo Online",
-    description: "Mostrá tus productos o servicios de forma ordenada.",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=300&q=80",
-    icon: "📋"
-  },
-  {
     title: "Ecommerce",
     description: "Vendé tus productos con una tienda funcional y segura.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=300&q=80",
@@ -30,6 +24,16 @@ const services = [
     icon: "📱"
   }
 ];
+
+import { Link } from "react-router-dom";
+
+// Mapeo de servicios a sus rutas correspondientes
+const serviceRoutes = {
+  "Web Simples": "/servicio/landing-page",
+  "Web Profesionales": "/servicio/web-profesionales",
+  "Ecommerce": "/servicio/ecommerce",
+  "Catálogos Digitales": "/servicio/catalogos-digitales"
+};
 
 function Services() {
   return (
@@ -44,20 +48,26 @@ function Services() {
         </div>
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <div className="service-icon">
-                <span>{service.icon}</span>
+            <Link 
+              to={serviceRoutes[service.title]} 
+              key={index} 
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <div className="service-card">
+                <div className="service-icon">
+                  <span>{service.icon}</span>
+                </div>
+                <div className="service-content">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+                <div className="service-arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
               </div>
-              <div className="service-content">
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-              <div className="service-arrow">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

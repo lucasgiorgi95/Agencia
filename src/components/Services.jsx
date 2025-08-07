@@ -25,7 +25,7 @@ const services = [
   }
 ];
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Mapeo de servicios a sus rutas correspondientes
 const serviceRoutes = {
@@ -36,9 +36,19 @@ const serviceRoutes = {
 };
 
 function Services() {
+  const navigate = useNavigate();
+
+  const handleServiceClick = (servicePath) => {
+    navigate(servicePath);
+    // Hacer scroll al top después de la navegación
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
-    <section id="servicios" className="services">
-      <div className="container">
+    <section  className="services">
+      <div id="servicios" className="container">
         <div className="services-header">
           <div className="section-badge">
             <span>Servicios</span>
@@ -48,26 +58,25 @@ function Services() {
         </div>
         <div className="services-grid">
           {services.map((service, index) => (
-            <Link 
-              to={serviceRoutes[service.title]} 
+            <div 
               key={index} 
-              style={{ textDecoration: 'none', color: 'inherit' }}
+              className="service-card"
+              onClick={() => handleServiceClick(serviceRoutes[service.title])}
+              style={{ cursor: 'pointer' }}
             >
-              <div className="service-card">
-                <div className="service-icon">
-                  <span>{service.icon}</span>
-                </div>
-                <div className="service-content">
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </div>
-                <div className="service-arrow">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
+              <div className="service-icon">
+                <span>{service.icon}</span>
               </div>
-            </Link>
+              <div className="service-content">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+              <div className="service-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
           ))}
         </div>
       </div>

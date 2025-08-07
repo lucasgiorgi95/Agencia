@@ -31,10 +31,14 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <a 
+          href="/#hero" 
+          className="navbar-logo"
+          onClick={(e) => handleNavigation(e, '/#hero')}
+        >
           {/* <span>GiorgiDev</span> */}
           <img src="/giorgi.png" alt="logo GiorgiDev" />
-        </Link>
+        </a>
         <div className="navbar-content">
           <ul className="navbar-menu">
             {menuItems.map((item) => (

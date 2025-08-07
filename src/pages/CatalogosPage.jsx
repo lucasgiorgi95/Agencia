@@ -7,21 +7,55 @@ const CatalogosPage = () => (
     <ServiceHero 
       title="Catálogos Digitales Interactivos"
       description="Transforma tu menú o catálogo físico en una experiencia digital interactiva. Ideal para restaurantes, barcos, tiendas y cualquier negocio que necesite mostrar sus productos de manera atractiva en dispositivos móviles."
-      badge=" Moderniza tu Menú"
+      badge="📱 Moderniza tu Menú"
       imageUrl="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80"
     />
     
     <div className="container" style={{ padding: '64px 0' }}>
+      <style jsx>{`
+        .section {
+          margin-bottom: 3rem;
+        }
+
+        .section h2 {
+          margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+          .container {
+            padding: 32px 0 !important;
+          }
+
+          .section {
+            margin-bottom: 2rem;
+          }
+
+          .section h2 {
+            font-size: 1.5rem;
+            line-height: 1.3;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .container {
+            padding: 24px 0 !important;
+          }
+
+          .section h2 {
+            font-size: 1.3rem;
+          }
+        }
+      `}</style>
       <div className="section">
         <h2>Características Principales</h2>
         <div className="features-grid">
           {[
-            { icon: '', title: 'Diseño Mobile-First', desc: 'Optimizado para dispositivos móviles' },
-            { icon: '', title: 'Carga Rápida', desc: 'Experiencia de usuario fluida' },
-            { icon: '', title: 'Actualizaciones en Tiempo Real', desc: 'Cambios instantáneos' },
-            { icon: '', title: 'Búsqueda Inteligente', desc: 'Encuentra productos fácilmente' },
-            { icon: '', title: 'WhatsApp Integrado', desc: 'Pedidos directos desde el catálogo' },
-            { icon: '', title: 'Panel de Control', desc: 'Gestiona tu contenido fácilmente' },
+            { icon: '📱', title: 'Diseño Mobile-First', desc: 'Optimizado para dispositivos móviles' },
+            { icon: '⚡', title: 'Carga Rápida', desc: 'Experiencia de usuario fluida' },
+            { icon: '🔄', title: 'Actualizaciones en Tiempo Real', desc: 'Cambios instantáneos' },
+            { icon: '🔍', title: 'Búsqueda Inteligente', desc: 'Encuentra productos fácilmente' },
+            { icon: '💬', title: 'WhatsApp Integrado', desc: 'Pedidos directos desde el catálogo' },
+            { icon: '⚙️', title: 'Panel de Control', desc: 'Gestiona tu contenido fácilmente' },
           ].map((feature, index) => (
             <div key={index} className="feature-card">
               <div className="feature-icon">{feature.icon}</div>
@@ -36,10 +70,10 @@ const CatalogosPage = () => (
         <h2>Ideal para:</h2>
         <div className="use-cases">
           {[
-            { icon: '', title: 'Restaurantes', desc: 'Menús digitales interactivos' },
-            { icon: '', title: 'Bares', desc: 'Cartas de bebidas actualizables' },
-            { icon: '', title: 'Tiendas', desc: 'Catálogo de productos' },
-            { icon: '', title: 'Servicios', desc: 'Portafolio de trabajos' },
+            { icon: '🍽️', title: 'Restaurantes', desc: 'Menús digitales interactivos' },
+            { icon: '🍺', title: 'Bares', desc: 'Cartas de bebidas actualizables' },
+            { icon: '🛍️', title: 'Tiendas', desc: 'Catálogo de productos' },
+            { icon: '🔧', title: 'Servicios', desc: 'Portafolio de trabajos' },
           ].map((useCase, index) => (
             <div key={index} className="use-case">
               <div className="use-case-icon">{useCase.icon}</div>
@@ -175,8 +209,90 @@ const CatalogosPage = () => (
       }
       
       @media (max-width: 768px) {
-        .features-grid, .use-cases, .benefits-grid {
+        .features-grid, .use-cases {
           grid-template-columns: 1fr;
+          gap: 1.5rem;
+          margin: 2rem 0;
+        }
+
+        .feature-card, .use-case {
+          padding: 1.5rem;
+        }
+
+        .feature-icon, .use-case-icon {
+          font-size: 2rem;
+        }
+
+        .benefits-section {
+          margin: 3rem 0;
+        }
+
+        .benefits-grid {
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+        }
+
+        .benefit-item {
+          padding: 0.8rem 1.2rem;
+          font-size: 0.9rem;
+        }
+
+        .check-icon {
+          font-size: 1rem;
+        }
+
+        .cta-section {
+          padding: 3rem 1.5rem;
+          margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+          font-size: 1.5rem;
+        }
+
+        .cta-section p {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .features-grid, .use-cases {
+          gap: 1rem;
+          margin: 1.5rem 0;
+        }
+
+        .feature-card, .use-case {
+          padding: 1.2rem;
+        }
+
+        .feature-icon, .use-case-icon {
+          font-size: 1.8rem;
+        }
+
+        .benefits-section {
+          margin: 2rem 0;
+        }
+
+        .benefit-item {
+          padding: 0.7rem 1rem;
+          font-size: 0.85rem;
+        }
+
+        .cta-section {
+          padding: 2rem 1rem;
+        }
+
+        .cta-section h2 {
+          font-size: 1.3rem;
+        }
+
+        .cta-section p {
+          font-size: 0.9rem;
+        }
+
+        .btn-primary {
+          padding: 0.7rem 1.5rem;
+          font-size: 0.9rem;
         }
       }
     `}</style>

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { emailjsConfig } from "../config/emailjs";
+import { emailjsConfig, contactInfo } from "../config/emailjs";
 
 function Contact() {
   const form = useRef();
@@ -179,7 +179,7 @@ function Contact() {
                   </div>
                   <div className="method-content">
                     <h4>Email</h4>
-                    <a href="mailto:giorgi.dev.ok@gmail.com">giorgi.dev.ok@gmail.com</a>
+                    <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
                   </div>
                 </div>
                 <div className="contact-method">
@@ -199,7 +199,7 @@ function Contact() {
                   </div>
                   <div className="method-content">
                     <h4>LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/lucasmartingiorgi/" target="_blank" rel="noopener noreferrer">
+                    <a href={contactInfo.linkedinUrl} target="_blank" rel="noopener noreferrer">
                       /lucasmartingiorgi
                     </a>
                   </div>

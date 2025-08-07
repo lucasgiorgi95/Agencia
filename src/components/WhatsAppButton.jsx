@@ -1,12 +1,12 @@
 import React, { useState } from "react";
+import { contactInfo } from "../config/emailjs";
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Número de WhatsApp (cambiar por el tuyo)
-  const phoneNumber = "3764101469"; // Formato: código país + número sin espacios
-  const message =
-    "¡Hola! Me interesa conocer más sobre sus servicios de desarrollo web.";
+  // Usar variables de entorno para información de contacto
+  const phoneNumber = contactInfo.phone;
+  const message = contactInfo.whatsappMessage;
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message

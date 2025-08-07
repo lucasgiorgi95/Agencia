@@ -3,15 +3,16 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import CTA from "./components/CTA";
+import Contact from "./components/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 
 // Importar páginas de servicios
-import LandingPage from "./pages/LandingPage";
-import WebProfesionalesPage from "./pages/WebProfesionalesPage";
-import EcommercePage from "./pages/EcommercePage";
-import CatalogosPage from "./pages/CatalogosPage";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import WebProfesionalesPage from "./pages/WebProfesionalesPage/WebProfesionalesPage";
+import EcommercePage from "./pages/EcommercePage/EcommercePage";
+import CatalogosPage from "./pages/CatalogosPage/CatalogosPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Services />
               <Portfolio />
               <CTA />
+              
             </Layout>
           } />
           <Route path="/servicio/landing-page" element={<LandingPage />} />

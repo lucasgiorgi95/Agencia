@@ -1,12 +1,13 @@
 import React from "react";
-import Layout from "../components/Layout";
-import ServiceHero from "../components/ServiceHero";
-import FeatureGrid from "../components/FeatureGrid";
-import SectionsList from "../components/SectionsList";
-import IntegrationsGrid from "../components/IntegrationsGrid";
-import BenefitsSection from "../components/BenefitsSection";
-import ProcessSteps from "../components/ProcessSteps";
-import CTASection from "../components/CTASection";
+import Layout from "../../components/Layout";
+import ServiceHero from "../../components/ServiceHero";
+import FeatureGrid from "../../components/FeatureGrid";
+import SectionsList from "../../components/SectionsList";
+import IntegrationsGrid from "../../components/IntegrationsGrid";
+import BenefitsSection from "../../components/BenefitsSection";
+import ProcessSteps from "../../components/ProcessSteps";
+import CTASection from "../../components/CTASection";
+import "./EcommercePage.css";
 
 const EcommercePage = () => {
   // Data para las características principales
@@ -133,54 +134,8 @@ const EcommercePage = () => {
         imageUrl="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=500&q=80"
       />
       
-      <div className="container" style={{ padding: '64px 0' }}>
-        <style jsx>{`
-          .section {
-            margin-bottom: 3rem;
-          }
-
-          .section h2 {
-            margin-bottom: 1rem;
-          }
-
-          .section p {
-            line-height: 1.6;
-          }
-
-          @media (max-width: 768px) {
-            .container {
-              padding: 32px 0 !important;
-            }
-
-            .section {
-              margin-bottom: 2rem;
-            }
-
-            .section h2 {
-              font-size: 1.5rem;
-              line-height: 1.3;
-            }
-
-            .section p {
-              font-size: 0.95rem;
-              line-height: 1.5;
-            }
-          }
-
-          @media (max-width: 480px) {
-            .container {
-              padding: 24px 0 !important;
-            }
-
-            .section h2 {
-              font-size: 1.3rem;
-            }
-
-            .section p {
-              font-size: 0.9rem;
-            }
-          }
-        `}</style>
+      <div className="service-page">
+        <div className="container">
         <div className="section">
           <h2>¿Por qué elegir una Tienda Online E-commerce?</h2>
           <p>
@@ -227,6 +182,7 @@ const EcommercePage = () => {
           description="Obtén una tienda profesional que convierta visitantes en compradores y haga crecer tu negocio las 24 horas del día."
           buttonText="Solicitar Cotización"
         />
+        </div>
       </div>
     </Layout>
   );

@@ -25,6 +25,13 @@ body {
   padding: 0 2rem;
 }
 
+/* Asegurar padding lateral en todas las pantallas */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
 /* Utilities */
 .section-badge {
   display: inline-flex;
@@ -921,15 +928,33 @@ body {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    padding: 2rem 1rem;
   }
   
   .hero-text h1 {
     font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.5;
   }
   
   .hero-buttons {
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero-visual {
+    margin-top: 1rem;
+  }
+
+  .hero-image-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
   }
   
   .hero-stats {
@@ -950,18 +975,35 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 32px 1.5rem !important;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
-    padding: 0 1rem;
+    padding: 24px 1rem !important;
   }
   
   .hero-text h1 {
     font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
   
   .hero-buttons {
     flex-direction: column;
     width: 100%;
+    gap: 0.8rem;
+  }
+
+  .hero-image-container {
+    max-width: 280px;
   }
   
   .btn-primary,
@@ -1200,4 +1242,108 @@ body {
 
 .portfolio-card:hover .portfolio-image::before {
   left: 100%;
+}
+/* Estilos comunes para páginas de servicios */
+.service-page .container {
+  padding: 64px 2rem;
+}
+
+@media (max-width: 1024px) {
+  .service-page .container {
+    padding: 48px 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-page .container {
+    padding: 32px 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-page .container {
+    padding: 24px 1rem;
+  }
+}
+
+/* Estilos comunes para secciones */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.section p {
+  line-height: 1.6;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .section p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .section h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .section p {
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}/* 
+Optimización para móviles muy pequeños */
+@media (max-width: 360px) {
+  .hero-text h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .hero-badge span {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .hero-content {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .hero-image-container {
+    max-width: 250px;
+  }
 }

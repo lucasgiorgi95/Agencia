@@ -116,6 +116,7 @@ const MenuDigitalPage = () => {
         description="Ofrece a tus clientes una experiencia moderna y sin contacto con menús digitales accesibles desde cualquier celular. Actualizá tu carta en segundos y mejora tus ventas con un diseño fácil y atractivo."
         badge="🍽️ Menú Digital"
         imageUrl="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80"
+        exampleUrl="https://ejemplo-menu-digital.com"
         floatingCards={[
           { icon: "💻", text: "Diseño personalizado" },
           { icon: "🚀", text: "Mejor expericna" },

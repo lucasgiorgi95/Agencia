@@ -118,6 +118,7 @@ const LandingPage = () => {
         description="Creamos páginas simples y atractivas pensadas para que las personas que la visitan te escriban, compren o pidan más información. Son ideales para promocionar un producto o servicio puntual, y funcionan perfecto en celulares, tablets o computadoras."
         badge="🚀 Landing Pages"
         imageUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80"
+        exampleUrl="https://ejemplo-landing.com"
       />
 
       <div className="service-page">

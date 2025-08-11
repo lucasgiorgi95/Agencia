@@ -84,6 +84,7 @@ const CatalogosPage = () => {
         description="Transformamos tu lista de productos en un catálogo digital profesional. Vos solo enviás la información, nosotros hacemos todo el trabajo."
         badge="📱 Catálogos Digitales"
         imageUrl="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=500&q=80"
+        exampleUrl="https://ejemplo-catalogo-digital.com"
       />
 
       <div className="service-page">

@@ -1,14 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const ServiceHero = ({ title, description, badge, imageUrl, floatingCards }) => {
+const ServiceHero = ({
+  title,
+  description,
+  badge,
+  imageUrl,
+  floatingCards,
+  exampleUrl,
+}) => {
   return (
     <section className="hero service-hero">
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-text">
-            <div className="hero-badge">
-              <span>{badge || '✨ Servicio Profesional'}</span>
+            <div className="hero-badges">
+              <div className="hero-badge">
+                <span>{badge || "✨ Servicio Profesional"}</span>
+              </div>
+              {exampleUrl && (
+                <a
+                  href={exampleUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-example-btn"
+                >
+                  <span>Ejemplo</span>
+                </a>
+              )}
             </div>
             <h2 className="hero-title">{title}</h2>
             <p>{description}</p>
@@ -19,7 +38,13 @@ const ServiceHero = ({ title, description, badge, imageUrl, floatingCards }) => 
               <a href="/#servicios" className="btn-secondary">
                 <span>Ver todos los servicios</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </a>
             </div>
@@ -27,16 +52,24 @@ const ServiceHero = ({ title, description, badge, imageUrl, floatingCards }) => 
           <div className="hero-visual">
             <div className="hero-image-container">
               <img
-                src={imageUrl || "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80"}
+                src={
+                  imageUrl ||
+                  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80"
+                }
                 alt={title}
               />
               <div className="floating-elements">
-                {floatingCards ? floatingCards.map((card, index) => (
-                  <div key={index} className={`floating-card card-${index + 1}`}>
-                    <div className="card-icon">{card.icon}</div>
-                    <span>{card.text}</span>
-                  </div>
-                )) : (
+                {floatingCards ? (
+                  floatingCards.map((card, index) => (
+                    <div
+                      key={index}
+                      className={`floating-card card-${index + 1}`}
+                    >
+                      <div className="card-icon">{card.icon}</div>
+                      <span>{card.text}</span>
+                    </div>
+                  ))
+                ) : (
                   <>
                     <div className="floating-card card-1">
                       <div className="card-icon">💻</div>

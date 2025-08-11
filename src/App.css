@@ -325,6 +325,13 @@ body {
   align-items: center;
 }
 
+.hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -335,8 +342,61 @@ body {
   font-size: 0.875rem;
   font-weight: 500;
   color: #6366f1;
-  margin-bottom: 1.5rem;
 }
+
+.hero-example-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  border: 2px solid #22c55e;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  animation: pulseGreen 2s ease-in-out infinite;
+}
+
+.hero-example-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transition: left 0.6s ease;
+}
+
+
+
+.hero-example-btn:hover::before {
+  left: 100%;
+}
+
+.hero-example-btn:hover {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  border-color: #16a34a;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+  animation: none;
+}
+
+@keyframes pulseGreen {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.5), 0 0 0 8px rgba(34, 197, 94, 0.1);
+  }
+}
+
+
 
 .hero-text h1 {
   font-size: 3.5rem;
@@ -1495,4 +1555,69 @@ Optimización para móviles muy pequeños */
   .hero-image-container {
     max-width: 250px;
   }
+}
+/* 
+Responsive styles for hero badges */
+@media (max-width: 768px) {
+  .hero-badges {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .hero-badge span,
+  .hero-example-btn span {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-badges {
+    gap: 0.4rem;
+  }
+  
+  .hero-badge,
+  .hero-example-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}/*
+ Updated responsive styles for hero badges */
+@media (max-width: 768px) {
+  .hero-badges {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .hero-badge span {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .hero-example-btn {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.9rem;
+  }
+  
+
+}
+
+@media (max-width: 480px) {
+  .hero-badges {
+    gap: 0.4rem;
+  }
+  
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .hero-example-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+
 }

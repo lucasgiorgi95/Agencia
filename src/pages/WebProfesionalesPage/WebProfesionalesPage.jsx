@@ -106,6 +106,7 @@ const WebProfesionalesPage = () => {
         description="Creamos sitios web profesionales con múltiples páginas y secciones, completamente personalizados para adaptarse a las necesidades específicas de tu negocio. Nuestros diseños son modernos, responsivos y optimizados para motores de búsqueda."
         badge="💼 Presencia Profesional"
         imageUrl="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=500&q=80"
+        exampleUrl="https://ejemplo-web-profesional.com"
       />
       
       <div className="service-page">

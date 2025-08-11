@@ -24,7 +24,7 @@ function App() {
             <Layout>
               <Hero />
               <Services />
-              <Portfolio />
+              {/* <Portfolio /> */}
               <CTA />
               
             </Layout>

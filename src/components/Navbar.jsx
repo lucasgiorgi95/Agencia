@@ -10,7 +10,7 @@ const menuItems = [
 const serviciosItems = [
   { label: "Landing Page", href: "/servicio/landing-page" },
   { label: "Webs Profesionales", href: "/servicio/web-profesionales" },
-  { label: "E-commerce", href: "/servicio/ecommerce" },
+  // { label: "E-commerce", href: "/servicio/ecommerce" },
   { label: "Menú Digital", href: "/servicio/menu-digital" },
   { label: "Catálogos Digitales", href: "/servicio/catalogos-digitales" },
 ];

@@ -2,71 +2,127 @@ import React from "react";
 import Layout from "../../components/Layout";
 import ServiceHero from "../../components/ServiceHero";
 import FeatureGrid from "../../components/FeatureGrid";
+import WhatsAppFeature from "../../components/WhatsAppFeature";
 import BenefitsSection from "../../components/BenefitsSection";
 import CTASection from "../../components/CTASection";
 import "./CatalogosPage.css";
+import PricingSection from "../../components/PricingSection";
 
 const CatalogosPage = () => {
-  // Data para las características principales
+  // Ventajas principales del servicio
   const mainFeatures = [
-    { icon: '📱', title: 'Diseño Mobile-First', desc: 'Optimizado para dispositivos móviles' },
-    { icon: '⚡', title: 'Carga Rápida', desc: 'Experiencia de usuario fluida' },
-    { icon: '🔄', title: 'Actualizaciones en Tiempo Real', desc: 'Cambios instantáneos' },
-    { icon: '🔍', title: 'Búsqueda Inteligente', desc: 'Encuentra productos fácilmente' },
-    { icon: '💬', title: 'WhatsApp Integrado', desc: 'Pedidos directos desde el catálogo' },
-    { icon: '⚙️', title: 'Panel de Control', desc: 'Gestiona tu contenido fácilmente' },
+    {
+      icon: "🚀",
+      title: "Sin conocimientos técnicos",
+      desc: "Nosotros hacemos todo el trabajo por vos",
+    },
+    {
+      icon: "🎨",
+      title: "Diseño profesional",
+      desc: "Catálogo atractivo para tu marca",
+    },
+    {
+      icon: "☁️",
+      title: "Hosting incluido",
+      desc: "Tu catálogo siempre disponible online",
+    },
+    {
+      icon: "📱",
+      title: "Código QR personalizado",
+      desc: "Listo para imprimir y usar",
+    },
+    {
+      icon: "📲",
+      title: "Compatible con móviles",
+      desc: "Funciona en todos los dispositivos",
+    },
+    {
+      icon: "🔄",
+      title: "Actualizaciones disponibles",
+      desc: "Podés modificar tu catálogo después",
+    },
   ];
 
-  // Data para casos de uso
+  // Casos de uso ideales
   const useCases = [
-    { icon: '🍽️', title: 'Restaurantes', desc: 'Menús digitales interactivos' },
-    { icon: '🍺', title: 'Bares', desc: 'Cartas de bebidas actualizables' },
-    { icon: '🛍️', title: 'Tiendas', desc: 'Catálogo de productos' },
-    { icon: '🔧', title: 'Servicios', desc: 'Portafolio de trabajos' },
+    { icon: "🛍️", title: "Tiendas de ropa, calzado y accesorios", desc: "" },
+    {
+      icon: "🏢",
+      title: "Showrooms de productos variados y colecciones",
+      desc: "",
+    },
+    {
+      icon: "🖥️",
+      title: "Locales de tecnología y electrodomésticos",
+      desc: "",
+    },
+    {
+      icon: "🏠",
+      title:
+        "Negocios con amplias ofertas que quieren mostrar su catálogo sin venta online directa",
+      desc: "",
+    },
   ];
 
-  // Data para beneficios clave
-  const keyBenefits = [
-    'Elimina costos de impresión',
-    'Actualizaciones instantáneas',
-    'Experiencia interactiva',
-    'Fácil de compartir',
-    'Sin necesidad de app',
-    'Analíticas de uso'
+  // Beneficios de los catálogos digitales
+  const catalogBenefits = [
+    "Reduce costos en impresión y actualizaciones",
+    "Actualización rápida y sencilla sin necesidad de imprimir de nuevo",
+    "Presentación profesional que mejora la imagen de tu negocio",
+    "Acceso fácil y rápido desde cualquier smartphone, sin apps",
+    "Diseño responsive que se adapta a todos los dispositivos",
+    "Código QR personalizado para compartir en físico y digital",
+    "Facilita la consulta de productos sin necesidad de atención directa",
+    "Administración simple y rápida desde un panel intuitivo",
+    "Posibilidad de incluir carrito y pedidos directos por WhatsApp"
   ];
 
   return (
     <Layout>
-      <ServiceHero 
-        title="Catálogos Digitales Interactivos"
-        description="Transforma tu menú o catálogo físico en una experiencia digital interactiva. Ideal para restaurantes, barcos, tiendas y cualquier negocio que necesite mostrar sus productos de manera atractiva en dispositivos móviles."
-        badge="📱 Moderniza tu Menú"
-        imageUrl="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80"
+      <ServiceHero
+        title="Catálogos Digitales Profesionales"
+        description="Transformamos tu lista de productos en un catálogo digital profesional. Vos solo enviás la información, nosotros hacemos todo el trabajo."
+        badge="📱 Catálogos Digitales"
+        imageUrl="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=500&q=80"
       />
-      
+
       <div className="service-page">
         <div className="container">
-        <FeatureGrid 
-          title="Características Principales" 
-          features={mainFeatures} 
-        />
+          <FeatureGrid
+            title="¿Por qué elegir nuestros catálogos digitales?"
+            features={mainFeatures}
+          />
 
-        <FeatureGrid 
-          title="Ideal para:" 
-          features={useCases} 
-          className="use-cases"
-        />
+          <WhatsAppFeature
+            title="Compra por WhatsApp"
+            description="Tu cliente elige los productos y la cantidad, los agrega al carrito y cuando termina, te envía el pedido directo por WhatsApp para cerrar la compra fácil y rápido."
+          />
 
-        <BenefitsSection
-          title="Beneficios Clave"
-          benefits={keyBenefits}
-        />
+          <FeatureGrid
+            title="Ideal para:"
+            features={useCases}
+            className="use-cases"
+          />
 
-        <CTASection
-          title="¿Listo para modernizar tu menú o catálogo?"
-          description="Convierte tu catálogo en una experiencia digital atractiva para tus clientes."
-          buttonText="Solicitar Demostración"
-        />
+          <BenefitsSection
+            title="Beneficios de tener un Catálogo Digital"
+            benefits={catalogBenefits}
+          />
+
+          <PricingSection
+            title="Inversión"
+            price="Desde $100.000 ARS"
+            description="Catálogos profesionales y fáciles de usar, con código QR para que tus clientes vean tu oferta en el celular y puedan pedir rápido por WhatsApp."
+            disclaimer="El precio base no incluye servicios de actualización o mantenimiento.
+*Paquetes desde $25.000 ARS (hasta 5 cambios ocasionales).
+*Plan mensual desde $30.000 ARS (cambios ilimitados y soporte)."
+          />
+
+          <CTASection
+            title="¿Listo para tener tu catálogo digital?"
+            description="Dejá que nos encarguemos de todo. En pocos días tendrás tu catálogo profesional listo para compartir con tus clientes."
+            buttonText="Solicitar catálogo ahora"
+          />
         </div>
       </div>
     </Layout>

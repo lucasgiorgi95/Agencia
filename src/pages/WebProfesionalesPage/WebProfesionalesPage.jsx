@@ -4,6 +4,7 @@ import ServiceHero from "../../components/ServiceHero";
 import FeatureGrid from "../../components/FeatureGrid";
 import SectionsList from "../../components/SectionsList";
 import ProcessSteps from "../../components/ProcessSteps";
+import PricingSection from "../../components/PricingSection";
 import CTASection from "../../components/CTASection";
 import "./WebProfesionalesPage.css";
 
@@ -138,6 +139,13 @@ const WebProfesionalesPage = () => {
         <ProcessSteps
           title="Nuestro Proceso de Trabajo"
           steps={workProcess}
+        />
+
+        <PricingSection
+          title="Inversión"
+          price="Desde $250.000 ARS"
+          description="Incluye diseño personalizado, hasta 5 páginas optimizadas para dispositivos móviles, textos persuasivos y configuración básica de SEO y analíticas."
+          disclaimer="El precio final puede variar según la cantidad de páginas adicionales, funcionalidades y personalizaciones solicitadas."
         />
 
         <CTASection

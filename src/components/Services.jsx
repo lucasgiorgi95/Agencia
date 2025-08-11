@@ -12,10 +12,10 @@ const services = [
     icon: "💼"
   },
   {
-    title: "Ecommerce",
-    description: "Vendé tus productos con una tienda funcional y segura.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=300&q=80",
-    icon: "🛒"
+    title: "Menú Digital",
+    description: "Menús interactivos con códigos QR para restaurantes y bares.",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=300&q=80",
+    icon: "🍽️"
   },
   {
     title: "Catálogos Digitales",
@@ -31,7 +31,7 @@ import { useNavigate } from "react-router-dom";
 const serviceRoutes = {
   "Web Simples": "/servicio/landing-page",
   "Web Profesionales": "/servicio/web-profesionales",
-  "Ecommerce": "/servicio/ecommerce",
+  "Menú Digital": "/servicio/menu-digital",
   "Catálogos Digitales": "/servicio/catalogos-digitales"
 };
 
@@ -40,10 +40,6 @@ function Services() {
 
   const handleServiceClick = (servicePath) => {
     navigate(servicePath);
-    // Hacer scroll al top después de la navegación
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
   };
 
   return (

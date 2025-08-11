@@ -12,6 +12,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import WebProfesionalesPage from "./pages/WebProfesionalesPage/WebProfesionalesPage";
 import EcommercePage from "./pages/EcommercePage/EcommercePage";
+import MenuDigitalPage from "./pages/MenuDigitalPage/MenuDigitalPage";
 import CatalogosPage from "./pages/CatalogosPage/CatalogosPage";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/servicio/landing-page" element={<LandingPage />} />
           <Route path="/servicio/web-profesionales" element={<WebProfesionalesPage />} />
           <Route path="/servicio/ecommerce" element={<EcommercePage />} />
+          <Route path="/servicio/menu-digital" element={<MenuDigitalPage />} />
           <Route path="/servicio/catalogos-digitales" element={<CatalogosPage />} />
         </Routes>
       </ScrollToTop>

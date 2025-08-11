@@ -8,7 +8,7 @@ function CTA() {
             <p>Construyamos juntos la web que tu proyecto necesita.</p>
           </div>
           <div className="cta-actions">
-            <a href="#contacto" className="btn-primary">
+            <a href="#contacto" className="btn-primary" style={{text:"white"}}>
               CONTACTAME AHORA
             </a>
             <div className="cta-info">

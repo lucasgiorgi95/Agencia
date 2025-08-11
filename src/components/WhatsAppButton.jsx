@@ -49,19 +49,21 @@ const WhatsAppButton = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
           z-index: 1000;
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.3s ease;
           text-decoration: none;
           color: white;
           cursor: pointer;
-          animation: pulse 2s infinite;
+          border: none;
+          animation: subtlePulse 3s ease-in-out infinite;
         }
 
         .whatsapp-button:hover {
-          transform: translateY(-5px) scale(1.1);
-          box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+          transform: translateY(-3px) scale(1.05);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
           background: #128c7e;
+          animation: none;
         }
 
         .whatsapp-icon {
@@ -72,7 +74,7 @@ const WhatsAppButton = () => {
         }
 
         .whatsapp-button:hover .whatsapp-icon {
-          transform: rotate(10deg) scale(1.1);
+          transform: rotate(15deg) scale(1.15);
         }
 
         .whatsapp-tooltip {
@@ -87,7 +89,7 @@ const WhatsAppButton = () => {
           font-size: 0.875rem;
           font-weight: 500;
           white-space: nowrap;
-          box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
           animation: slideIn 0.3s ease-out;
         }
 
@@ -101,16 +103,7 @@ const WhatsAppButton = () => {
           border-right-color: #0f172a;
         }
 
-        @keyframes pulse {
-          0%,
-          100% {
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-          }
-          50% {
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5),
-              0 0 0 10px rgba(37, 211, 102, 0.1);
-          }
-        }
+
 
         @keyframes slideIn {
           from {
@@ -120,6 +113,17 @@ const WhatsAppButton = () => {
           to {
             opacity: 1;
             transform: translateY(-50%) translateX(0);
+          }
+        }
+
+        @keyframes subtlePulse {
+          0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          }
+          50% {
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
           }
         }
 

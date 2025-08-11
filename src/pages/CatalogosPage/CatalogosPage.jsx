@@ -74,7 +74,7 @@ const CatalogosPage = () => {
     "Código QR personalizado para compartir en físico y digital",
     "Facilita la consulta de productos sin necesidad de atención directa",
     "Administración simple y rápida desde un panel intuitivo",
-    "Posibilidad de incluir carrito y pedidos directos por WhatsApp"
+    "Posibilidad de incluir carrito y pedidos directos por WhatsApp",
   ];
 
   return (
@@ -91,11 +91,6 @@ const CatalogosPage = () => {
           <FeatureGrid
             title="¿Por qué elegir nuestros catálogos digitales?"
             features={mainFeatures}
-          />
-
-          <WhatsAppFeature
-            title="Compra por WhatsApp"
-            description="Tu cliente elige los productos y la cantidad, los agrega al carrito y cuando termina, te envía el pedido directo por WhatsApp para cerrar la compra fácil y rápido."
           />
 
           <FeatureGrid
